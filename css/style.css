@@ -229,9 +229,16 @@ a {
   border-color: rgba(255, 184, 0, 0.55);
 }
 
-.project-image {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.04);
 }
 
 .placeholder {
@@ -435,4 +442,149 @@ a {
   .site-footer {
     flex-wrap: wrap;
   }
+}
+
+
+/* =========================
+   PROJECT PAGE
+   ========================= */
+
+.project-page {
+  padding: 70px 8vw 120px;
+}
+
+.project-header h1 {
+  color: var(--yellow);
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  margin-bottom: 35px;
+}
+
+.project-hero {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-hero img {
+  width: 100%;
+  display: block;
+}
+
+.project-category {
+  color: #999;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  margin-top: 18px;
+}
+
+.project-description {
+  padding: 110px 0;
+  max-width: 850px;
+}
+
+.project-description h2 {
+  font-size: clamp(35px, 5vw, 64px);
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+.project-gallery {
+  padding: 70px 0;
+  border-top: 1px solid var(--border);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.project-tools {
+  padding: 70px 0;
+  border-top: 1px solid var(--border);
+}
+
+.project-tools ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-tools li {
+  color: #aaa;
+  font-size: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  max-width: 500px;
+}
+
+.project-back {
+  padding-top: 40px;
+}
+
+.project-page .section-title {
+  margin-bottom: 34px;
+}
+
+
+/* PROJECT CARD IMAGE */
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.04);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+  .project-page {
+    padding: 50px 6vw 80px;
+  }
+
+  .project-description {
+    padding: 80px 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-header h1 {
+    font-size: 42px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .project-page {
+    padding: 50px 6vw 80px;
+  }
+
+  .project-description {
+    padding: 80px 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
