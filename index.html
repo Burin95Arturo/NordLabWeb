@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NordLab — 3D visualization, design and digital art.">
+  <title>NordLab — 3D Visualization & Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="NordLab home">
+      <img src="assets/images/nordlab-logo.png" alt="NordLab">
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">HOME</a>
+      <a class="nav-link" href="#projects">PROJECTS</a>
+      <a class="nav-link" href="#about">ABOUT</a>
+      <a class="nav-link" href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-logo">
+        <img src="assets/images/nordlab-logo.png" alt="NordLab logo">
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">3D VISUALIZATION</p>
+        <h1>DESIGN <span>&amp;</span> ART</h1>
+        <div class="yellow-line"></div>
+        <p class="hero-text">
+          Exploring ideas and bringing them to life through
+          3D design, visualization and digital art.
+        </p>
+        <a class="button" href="#projects">
+          VIEW PROJECTS <span>→</span>
+        </a>
+      </div>
+
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="section-title">
+        <span></span>
+        <h2>FEATURED PROJECTS</h2>
+        <span></span>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image placeholder">
+            <span>PROJECT 01</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>PROJECT ONE</h3>
+              <p>Architectural Visualization</p>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image placeholder">
+            <span>PROJECT 02</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>PROJECT TWO</h3>
+              <p>Product Design</p>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image placeholder">
+            <span>PROJECT 03</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>PROJECT THREE</h3>
+              <p>Environment Art</p>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image placeholder">
+            <span>PROJECT 04</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>PROJECT FOUR</h3>
+              <p>3D Experiment</p>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div>
+        <p class="eyebrow">ABOUT NORDLAB</p>
+        <h2>Ideas into <span>visual experiences.</span></h2>
+      </div>
+      <p>
+        NordLab is a space for 3D projects, experiments, visualization
+        and digital art. This section can later be expanded with the
+        team's story, tools, services and workflow.
+      </p>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">LET'S WORK TOGETHER</p>
+      <h2>Have a project in mind?</h2>
+      <a class="button" href="mailto:hello@nordlab.com">
+        GET IN TOUCH <span>→</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> NORDLAB</p>
+    <div class="footer-line"></div>
+    <p>3D / DESIGN / ART</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
