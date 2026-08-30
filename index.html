@@ -1,161 +1,524 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NordLab — 3D visualization, design and digital art.">
-  <title>NordLab — 3D Visualization & Design</title>
+  <meta name="description" content="NordLab — 3D design, modeling, printing and digital projects.">
+  <title>NordLab — 3D Design & Projects</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
   <header class="site-header">
     <a class="brand" href="#home" aria-label="NordLab home">
       <img src="assets/images/nordlab-logo.png" alt="NordLab">
     </a>
 
-    <nav class="nav" aria-label="Main navigation">
-      <a class="nav-link active" href="#home">HOME</a>
-      <a class="nav-link" href="#projects">PROJECTS</a>
-      <a class="nav-link" href="#about">ABOUT</a>
-      <a class="nav-link" href="#contact">CONTACT</a>
-    </nav>
+
+<nav class="nav" aria-label="Main navigation">
+  <a class="nav-link active" href="#home">HOME</a>
+  <a class="nav-link" href="#projects">PROJECTS</a>
+  <a class="nav-link" href="#about">ABOUT</a>
+  <a class="nav-link" href="#contact">CONTACT</a>
+</nav>
+
+
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="hero-logo">
-        <img src="assets/images/nordlab-logo.png" alt="NordLab logo">
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-logo">
+    <img src="assets/images/nordlab-logo.png" alt="NordLab logo">
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow">3D DESIGN &amp; MAKING</p>
+
+    <h1>IDEAS <span>&amp;</span> OBJECTS</h1>
+
+    <div class="yellow-line"></div>
+
+    <p class="hero-text">
+      Exploring ideas and bringing them to life through
+      3D modeling, printing, prototyping and custom design.
+    </p>
+
+    <a class="button" href="#projects">
+      VIEW PROJECTS <span>→</span>
+    </a>
+  </div>
+
+  <div class="hero-glow" aria-hidden="true"></div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section class="projects-section" id="projects">
+
+  <div class="section-title">
+    <span></span>
+    <h2>FEATURED PROJECTS</h2>
+    <span></span>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 01 -->
+    <article class="project-card">
+
+      <div class="project-image placeholder">
+        <span>PROJECT 01</span>
       </div>
 
-      <div class="hero-content">
-        <p class="eyebrow">3D VISUALIZATION</p>
-        <h1>DESIGN <span>&amp;</span> ART</h1>
-        <div class="yellow-line"></div>
-        <p class="hero-text">
-          Exploring ideas and bringing them to life through
-          3D design, visualization and digital art.
-        </p>
-        <a class="button" href="#projects">
-          VIEW PROJECTS <span>→</span>
-        </a>
+      <div class="project-info">
+        <div>
+          <h3>PROJECT ONE</h3>
+          <p>3D Printing</p>
+        </div>
+
+        <span class="arrow">→</span>
       </div>
 
-      <div class="hero-glow" aria-hidden="true"></div>
-    </section>
+    </article>
 
-    <section class="projects-section" id="projects">
-      <div class="section-title">
-        <span></span>
-        <h2>FEATURED PROJECTS</h2>
-        <span></span>
-      </div>
 
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-image placeholder">
-            <span>PROJECT 01</span>
+    <!-- NORDIC LAMP -->
+    <article class="project-card">
+
+      <a href="projects/nordic-lamp.html">
+
+        <div class="project-image">
+          <img
+            src="assets/images/projects/nordic-lamp/cover.jpg"
+            alt="Nordic Lamp"
+          >
+        </div>
+
+        <div class="project-info">
+          <div>
+            <h3>NORDIC LAMP</h3>
+            <p>Product Design / 3D Modeling</p>
           </div>
-          <div class="project-info">
-            <div>
-              <h3>PROJECT ONE</h3>
-              <p>Architectural Visualization</p>
-            </div>
-            <span class="arrow">→</span>
-          </div>
-        </article>
 
-        <article class="project-card">
-            <a href="projects/nordic-lamp.html">
-                <div class="project-image">
-                    <img
-                        src="assets/images/projects/nordic-lamp/cover.jpg"
-                        alt="Nordic Lamp"
-                    >
-                </div>
+          <span class="arrow">→</span>
+        </div>
 
-                <div class="project-info">
-                    <div>
-                        <h3>NORDIC LAMP</h3>
-                        <p>Product Design / 3D Modeling</p>
-                    </div>
-
-                    <span class="arrow">→</span>
-                </div>
-            </a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image placeholder">
-            <span>PROJECT 02</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <h3>PROJECT TWO</h3>
-              <p>Product Design</p>
-            </div>
-            <span class="arrow">→</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image placeholder">
-            <span>PROJECT 03</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <h3>PROJECT THREE</h3>
-              <p>Environment Art</p>
-            </div>
-            <span class="arrow">→</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image placeholder">
-            <span>PROJECT 04</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <h3>PROJECT FOUR</h3>
-              <p>3D Experiment</p>
-            </div>
-            <span class="arrow">→</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="about-section" id="about">
-      <div>
-        <p class="eyebrow">ABOUT NORDLAB</p>
-        <h2>Ideas into <span>visual experiences.</span></h2>
-      </div>
-      <p>
-        NordLab is a space for 3D projects, experiments, visualization
-        and digital art. This section can later be expanded with the
-        team's story, tools, services and workflow.
-      </p>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <p class="eyebrow">LET'S WORK TOGETHER</p>
-      <h2>Have a project in mind?</h2>
-      <a class="button" href="mailto:hello@nordlab.com">
-        GET IN TOUCH <span>→</span>
       </a>
-    </section>
+
+    </article>
+
+
+    <!-- PROJECT 02 -->
+    <article class="project-card">
+
+      <div class="project-image placeholder">
+        <span>PROJECT 02</span>
+      </div>
+
+      <div class="project-info">
+        <div>
+          <h3>PROJECT TWO</h3>
+          <p>3D Printing</p>
+        </div>
+
+        <span class="arrow">→</span>
+      </div>
+
+    </article>
+
+
+    <!-- PROJECT 03 -->
+    <article class="project-card">
+
+      <div class="project-image placeholder">
+        <span>PROJECT 03</span>
+      </div>
+
+      <div class="project-info">
+        <div>
+          <h3>PROJECT THREE</h3>
+          <p>Custom Design</p>
+        </div>
+
+        <span class="arrow">→</span>
+      </div>
+
+    </article>
+
+
+    <!-- PROJECT 04 -->
+    <article class="project-card">
+
+      <div class="project-image placeholder">
+        <span>PROJECT 04</span>
+      </div>
+
+      <div class="project-info">
+        <div>
+          <h3>PROJECT FOUR</h3>
+          <p>3D Experiment</p>
+        </div>
+
+        <span class="arrow">→</span>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- WHAT WE DO -->
+
+<section class="services-section" id="services">
+
+  <div class="section-title">
+    <span></span>
+    <h2>WHAT WE DO</h2>
+    <span></span>
+  </div>
+
+  <div class="services-list">
+
+
+<article
+  class="service-item"
+  data-service="3D Printing"
+  tabindex="0"
+>
+
+  <div class="service-number">
+    01
+  </div>
+
+  <div class="service-content">
+    <h3>3D PRINTING</h3>
+
+    <p>
+      Bring existing or print-ready 3D models
+      into the physical world through 3D printing.
+    </p>
+  </div>
+
+  <span class="service-arrow">→</span>
+
+</article>
+
+
+<article
+  class="service-item"
+  data-service="3D Modeling"
+  tabindex="0"
+>
+
+  <div class="service-number">
+    02
+  </div>
+
+  <div class="service-content">
+    <h3>3D MODELING</h3>
+
+    <p>
+      Turn an idea, reference, object or concept
+      into a custom 3D model ready for your project.
+    </p>
+  </div>
+
+  <span class="service-arrow">→</span>
+
+</article>
+
+
+<article
+  class="service-item"
+  data-service="3D Modeling + Printing"
+  tabindex="0"
+>
+
+  <div class="service-number">
+    03
+  </div>
+
+  <div class="service-content">
+    <h3>3D MODELING + PRINTING</h3>
+
+    <p>
+      From the initial idea to the final object.
+      We handle the complete modeling and printing process.
+    </p>
+  </div>
+
+  <span class="service-arrow">→</span>
+
+</article>
+
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+
+  <div>
+    <p class="eyebrow">ABOUT NORDLAB</p>
+
+    <h2>
+      Ideas into
+      <span>real objects.</span>
+    </h2>
+  </div>
+
+  <p>
+    NordLab is a space for 3D projects, custom modeling,
+    3D printing and experimentation. From digital concepts
+    to physical objects, each project is developed with
+    a focus on design, functionality and detail.
+  </p>
+
+</section>
+
+
+<!-- CONTACT / GET IN TOUCH -->
+
+<section class="contact-section" id="contact">
+
+  <div class="contact-header">
+    <p class="eyebrow">LET'S WORK TOGETHER</p>
+
+
+<h2>
+  Have a project<br>
+  <span>in mind?</span>
+</h2>
+
+<p class="contact-intro">
+  Tell us what you need and we'll get back to you with the next steps.
+</p>
+
+
+  </div>
+
+  <form class="contact-form" id="contact-form">
+
+
+<!-- SERVICE -->
+<div class="form-section">
+
+  <p class="form-label">01 / WHAT DO YOU NEED?</p>
+
+  <div class="service-options">
+
+    <label class="service-option">
+      <input
+        type="radio"
+        name="service"
+        value="3D Printing"
+        required
+      >
+
+      <span class="service-option-content">
+        <strong>3D PRINTING</strong>
+        <small>Print an existing or print-ready 3D model.</small>
+      </span>
+
+      <span class="service-arrow">→</span>
+    </label>
+
+
+    <label class="service-option">
+      <input
+        type="radio"
+        name="service"
+        value="3D Modeling"
+      >
+
+      <span class="service-option-content">
+        <strong>3D MODELING</strong>
+        <small>Turn an idea, reference or object into a 3D model.</small>
+      </span>
+
+      <span class="service-arrow">→</span>
+    </label>
+
+
+    <label class="service-option">
+      <input
+        type="radio"
+        name="service"
+        value="3D Modeling + Printing"
+      >
+
+      <span class="service-option-content">
+        <strong>3D MODELING + PRINTING</strong>
+        <small>From the initial idea to the final printed object.</small>
+      </span>
+
+      <span class="service-arrow">→</span>
+    </label>
+
+  </div>
+
+</div>
+
+
+<!-- PROJECT DETAILS -->
+<div class="form-section">
+
+  <p class="form-label">02 / PROJECT DETAILS</p>
+
+  <div class="form-grid">
+
+    <div class="form-field">
+      <label for="name">NAME</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        required
+      >
+    </div>
+
+
+    <div class="form-field">
+      <label for="email">EMAIL</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@email.com"
+        required
+      >
+    </div>
+
+  </div>
+
+
+  <div class="form-field">
+    <label for="project-description">TELL US ABOUT YOUR PROJECT</label>
+
+    <textarea
+      id="project-description"
+      name="project-description"
+      rows="6"
+      placeholder="Describe your idea, what you need, dimensions, quantity or anything else that might help..."
+      required
+    ></textarea>
+  </div>
+
+
+  <div
+  class="form-field file-upload-field"
+  id="file-upload-field"
+  hidden
+>
+  <label for="project-file">
+    UPLOAD 3D MODEL
+    <span class="optional">OPTIONAL</span>
+  </label>
+
+  <input
+    type="file"
+    id="project-file"
+    name="project-file"
+    accept=".stl,.3mf"
+  >
+
+  <small class="file-help">
+    Accepted files: .STL / .3MF
+  </small>
+</div>
+
+  <!-- FILE UPLOAD -->
+
+  <div
+    class="form-field file-upload-field"
+    id="file-upload-field"
+    hidden
+  >
+
+    <label for="project-file">
+      UPLOAD 3D MODEL
+      <span class="optional">OPTIONAL</span>
+    </label>
+
+  <input
+  type="file"
+  id="project-file"
+  name="project-file"
+  accept=".stl,.3mf"
+
+  >
+
+    <small class="file-help">
+      Accepted files: .STL / .3MF
+    </small>
+
+  </div>
+</div>
+
+
+<!-- SUBMIT -->
+<div class="form-submit">
+
+  <button
+    type="submit"
+    class="button form-button"
+  >
+    SEND INQUIRY <span>→</span>
+  </button>
+
+  <p class="form-note">
+    We'll review your request and get back to you.
+  </p>
+
+</div>
+
+  </form>
+
+</section>
+
+
   </main>
 
+  <!-- FOOTER -->
+
   <footer class="site-footer">
-    <p>© <span id="year"></span> NORDLAB</p>
-    <div class="footer-line"></div>
-    <p>3D / DESIGN / ART</p>
+
+
+<p>© <span id="year"></span> NORDLAB</p>
+
+<div class="footer-line"></div>
+
+<a
+  class="footer-instagram"
+  href="https://www.instagram.com/nordlab.ok"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  INSTAGRAM / @NORDLAB.OK
+</a>
+
+<p>3D / DESIGN / PRINT</p>
+
+
   </footer>
 
   <script src="js/main.js"></script>
+
 </body>
 </html>
