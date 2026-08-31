@@ -280,6 +280,13 @@ export async function onRequestPost(context) {
        RESEND
        ========================= */
 
+      console.log(
+      "RESEND_API_KEY:",
+      context.env.RESEND_API_KEY
+        ? `exists (${context.env.RESEND_API_KEY.length} chars)`
+        : "MISSING"
+    );
+
     const response = await fetch(
       "https://api.resend.com/emails",
       {
@@ -309,21 +316,20 @@ export async function onRequestPost(context) {
 
     if (!response.ok) {
 
-      console.error(
-        "Resend error:",
-        result
-      );
+  console.error("Resend error:", result);
 
-      return jsonResponse(
-        {
-          success: false,
-          message:
-            "Unable to send the message."
-        },
-        500
-      );
+  return jsonResponse(
+    {
+      success: false,
+      message:
+        result?.message ||
+        result?.error ||
+        "Unable to send the message."
+    },
+    500
+  );
 
-    }
+}
 
 
     return jsonResponse(
