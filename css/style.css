@@ -1091,3 +1091,32 @@ line-height: 1.5;
 }
 
 }
+
+/* =========================
+FORM MESSAGE
+========================= */
+
+.form-button:disabled {
+opacity: 0.5;
+cursor: wait;
+}
+
+.form-message {
+margin-top: 22px;
+padding: 16px 18px;
+border: 1px solid var(--border);
+font-size: 12px;
+line-height: 1.6;
+}
+
+.form-message.success {
+color: var(--yellow);
+border-color: rgba(255, 184, 0, 0.45);
+background: rgba(255, 184, 0, 0.04);
+}
+
+.form-message.error {
+color: #ff8f8f;
+border-color: rgba(255, 100, 100, 0.35);
+background: rgba(255, 100, 100, 0.04);
+}

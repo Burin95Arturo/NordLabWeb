@@ -96,3 +96,110 @@ if (
 });
 
 });
+
+/* =========================
+   CONTACT FORM SUBMIT
+   ========================= */
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+
+  contactForm.addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector(
+      ".form-button"
+    );
+
+    const originalButtonText = submitButton.innerHTML;
+
+    submitButton.disabled = true;
+    submitButton.innerHTML = "SENDING... →";
+
+    try {
+
+      const formData = new FormData(contactForm);
+
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || "Unable to send your inquiry."
+        );
+      }
+
+      contactForm.reset();
+
+      /* Hide optional file upload */
+
+      if (fileUploadField) {
+        fileUploadField.hidden = true;
+      }
+
+      /* Remove selected service */
+
+      serviceOptions.forEach((option) => {
+        option.checked = false;
+      });
+
+      showFormMessage(
+        "Your inquiry has been sent successfully. We'll get back to you soon.",
+        "success"
+      );
+
+    } catch (error) {
+
+      console.error("Form submission error:", error);
+
+      showFormMessage(
+        error.message ||
+        "Something went wrong. Please try again.",
+        "error"
+      );
+
+    } finally {
+
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonText;
+
+    }
+
+  });
+
+}
+
+
+/* =========================
+   FORM MESSAGE
+   ========================= */
+
+function showFormMessage(message, type) {
+
+  let messageElement = document.getElementById("form-message");
+
+  if (!messageElement) {
+
+    messageElement = document.createElement("p");
+
+    messageElement.id = "form-message";
+    messageElement.className = "form-message";
+
+    const formSubmit = document.querySelector(".form-submit");
+
+    if (formSubmit) {
+      formSubmit.appendChild(messageElement);
+    }
+
+  }
+
+  messageElement.textContent = message;
+  messageElement.className = `form-message ${type}`;
+
+}
