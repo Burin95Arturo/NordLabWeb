@@ -17,20 +17,39 @@
 <body>
 
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="NordLab home">
-      <img src="assets/images/nordlab-logo.png" alt="NordLab">
-    </a>
+  <a href="#home" class="brand">NORDLAB</a>
 
+  <div class="header-actions">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active" data-i18n="nav.home">HOME</a>
+      <a href="#projects" class="nav-link" data-i18n="nav.projects">PROJECTS</a>
+      <a href="#about" class="nav-link" data-i18n="nav.about">ABOUT</a>
+      <a href="#contact" class="nav-link" data-i18n="nav.contact">CONTACT</a>
+    </nav>
 
-<nav class="nav" aria-label="Main navigation">
-  <a class="nav-link active" href="#home">HOME</a>
-  <a class="nav-link" href="#projects">PROJECTS</a>
-  <a class="nav-link" href="#about">ABOUT</a>
-  <a class="nav-link" href="#contact">CONTACT</a>
-</nav>
+    <div class="language-switcher" aria-label="Language selector">
+      <button
+        type="button"
+        class="language-button active"
+        data-lang="en"
+        aria-pressed="true"
+      >
+        EN
+      </button>
 
+      <span>/</span>
 
-  </header>
+      <button
+        type="button"
+        class="language-button"
+        data-lang="es"
+        aria-pressed="false"
+      >
+        ES
+      </button>
+    </div>
+  </div>
+</header>
 
   <main>
 
@@ -49,7 +68,7 @@
 
     <div class="yellow-line"></div>
 
-    <p class="hero-text">
+    <p class="hero-text" data-i18n="contact.description">
       Exploring ideas and bringing them to life through
       3D modeling, printing, prototyping and custom design.
     </p>
@@ -69,7 +88,7 @@
 
   <div class="section-title">
     <span></span>
-    <h2>FEATURED PROJECTS</h2>
+    <h2 data-i18n-html="projects.title">FEATURED PROJECTS</h2>
     <span></span>
   </div>
 
@@ -214,7 +233,9 @@
 
   <div class="section-title">
     <span></span>
-    <h2>WHAT WE DO</h2>
+    <h2 data-i18n="services.title">
+      WHAT WE DO
+    </h2>
     <span></span>
   </div>
 
@@ -234,9 +255,9 @@
   <div class="service-content">
     <h3>3D PRINTING</h3>
 
-    <p>
-      Bring existing or print-ready 3D models
-      into the physical world through 3D printing.
+    <p data-i18n="services.printing.description">
+      Bring existing or print-ready 3D models into the physical world
+      through 3D printing.
     </p>
   </div>
 
@@ -258,9 +279,9 @@
   <div class="service-content">
     <h3>3D MODELING</h3>
 
-    <p>
-      Turn an idea, reference, object or concept
-      into a custom 3D model ready for your project.
+    <p data-i18n="services.modeling.description">
+      Turn an idea, reference, object or concept into a custom 3D model
+      ready for your project.
     </p>
   </div>
 
@@ -282,9 +303,9 @@
   <div class="service-content">
     <h3>3D MODELING + PRINTING</h3>
 
-    <p>
-      From the initial idea to the final object.
-      We handle the complete modeling and printing process.
+    <p data-i18n="services.full.description">
+      From the initial idea to the final object. We handle the complete
+      modeling and printing process.
     </p>
   </div>
 
@@ -302,21 +323,24 @@
 <section class="about-section" id="about">
 
   <div>
-    <p class="eyebrow">ABOUT NORDLAB</p>
+    <p class="eyebrow" data-i18n="about.eyebrow">
+      ABOUT NORDLAB
+    </p>
 
-    <h2>
-      Ideas into
-      <span>real objects.</span>
+    <h2 data-i18n-html="about.title">
+      Ideas into <span>real objects.</span>
     </h2>
   </div>
 
-  <p>
-    NordLab began in 2020 as a small space for exploring 3D design and making. 
-    Over the years, we have continued to grow by incorporating new technologies, techniques and tools, turning ideas into 
-    real objects and taking on an ever-growing range of projects.
-    Today, NordLab brings together 3D modeling, printing, prototyping and custom design, with a focus on functionality, 
-    detail and finding the right solution for every project.
+  <p data-i18n="about.description">
+    NordLab began in 2020 as a small space for exploring 3D design
+    and making. Over time, we grew by incorporating new technologies,
+    techniques and tools, turning ideas into real objects and taking
+    on an increasingly wide range of projects.
 
+    Today, NordLab brings together 3D modeling, 3D printing,
+    prototyping and custom design, with a focus on functionality,
+    detail and finding the right solution for each project.
   </p>
 
 </section>
@@ -327,17 +351,18 @@
 <section class="contact-section" id="contact">
 
   <div class="contact-header">
-    <p class="eyebrow">LET'S WORK TOGETHER</p>
+    <p class="eyebrow" data-i18n="contact.eyebrow">
+      LET'S WORK TOGETHER
+    </p>
 
 
-<h2>
-  Have a project<br>
-  <span>in mind?</span>
-</h2>
+  <h2 data-i18n="contact.title">
+    Have a project in mind?
+  </h2>
 
-<p class="contact-intro">
-  Tell us what you need and we'll get back to you with the next steps.
-</p>
+  <p data-i18n="contact.description">
+    Tell us what you need and we'll get back to you with the next steps.
+  </p>
 
 
   </div>
@@ -354,7 +379,9 @@
 <!-- SERVICE -->
 <div class="form-section">
 
-  <p class="form-label">01 / WHAT DO YOU NEED?</p>
+  <span data-i18n="form.serviceTitle">
+    01 / WHAT DO YOU NEED?
+  </span>
 
   <div class="service-options">
 
@@ -368,7 +395,7 @@
 
       <span class="service-option-content">
         <strong>3D PRINTING</strong>
-        <small>Print an existing or print-ready 3D model.</small>
+        <small data-i18n-html="about.3dprinting.title">Print an existing or print-ready 3D model.</small>
       </span>
 
       <span class="service-arrow">→</span>
@@ -384,7 +411,7 @@
 
       <span class="service-option-content">
         <strong>3D MODELING</strong>
-        <small>Turn an idea, reference or object into a 3D model.</small>
+        <small data-i18n-html="about.3dmodeling.title">Turn an idea, reference or object into a 3D model.</small>
       </span>
 
       <span class="service-arrow">→</span>
@@ -400,7 +427,7 @@
 
       <span class="service-option-content">
         <strong>3D MODELING + PRINTING</strong>
-        <small>From the initial idea to the final printed object.</small>
+        <small data-i18n-html="about.3dmodelingprinting.title">From the initial idea to the final printed object.</small>
       </span>
 
       <span class="service-arrow">→</span>
@@ -414,24 +441,32 @@
 <!-- PROJECT DETAILS -->
 <div class="form-section">
 
-  <p class="form-label">02 / PROJECT DETAILS</p>
+  <span data-i18n="form.detailsTitle">
+    02 / PROJECT DETAILS
+  </span>
 
   <div class="form-grid">
 
     <div class="form-field">
-      <label for="name">NAME</label>
+      <label for="name" data-i18n="form.name">
+        NAME
+      </label>
+
       <input
         type="text"
         id="name"
         name="name"
         placeholder="Your name"
+        data-i18n-placeholder="form.namePlaceholder"
         required
       >
     </div>
 
 
     <div class="form-field">
-      <label for="email">EMAIL</label>
+      <label for="email" data-i18n="form.email">
+        EMAIL
+      </label>
       <input
         type="email"
         id="email"
@@ -445,13 +480,16 @@
 
 
   <div class="form-field">
-    <label for="project-description">TELL US ABOUT YOUR PROJECT</label>
+    <label for="project-description" data-i18n="form.description">
+      TELL US ABOUT YOUR PROJECT
+    </label>
 
     <textarea
       id="project-description"
       name="project-description"
       rows="6"
       placeholder="Describe your idea, what you need, dimensions, quantity or anything else that might help..."
+      data-i18n-placeholder="form.descriptionPlaceholder"
       required
     ></textarea>
   </div>
@@ -463,8 +501,13 @@
   hidden
 >
   <label for="project-file">
-    UPLOAD 3D MODEL
-    <span class="optional">OPTIONAL</span>
+    <span data-i18n="form.upload">
+      UPLOAD 3D MODEL
+    </span>
+
+    <span class="optional" data-i18n="form.optional">
+      OPTIONAL
+    </span>
   </label>
 
   <input
@@ -511,18 +554,22 @@
 <!-- SUBMIT -->
 <div class="form-submit">
 
-  <button
-    type="submit"
-    class="button form-button"
-  >
-    SEND INQUIRY <span>→</span>
+ <button type="submit" class="button" data-i18n="form.submit">
+    SEND INQUIRY
   </button>
 
-  <p class="form-note">
+  <p class="form-note" data-i18n="form.note">
     We'll review your request and get back to you.
   </p>
 
 </div>
+
+<input
+  type="hidden"
+  name="language"
+  id="language"
+  value="en"
+>
 
   </form>
 

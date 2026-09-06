@@ -1120,3 +1120,52 @@ color: #ff8f8f;
 border-color: rgba(255, 100, 100, 0.35);
 background: rgba(255, 100, 100, 0.04);
 }
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.language-switcher span {
+  color: var(--gray);
+}
+
+.language-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--gray);
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.language-button:hover,
+.language-button.active {
+  color: var(--yellow);
+}
+
+@media (max-width: 700px) {
+  .header-actions {
+    gap: 14px;
+  }
+
+  .language-switcher {
+    font-size: 9px;
+  }
+}

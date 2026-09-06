@@ -23,7 +23,7 @@
         </a>
 
         <nav class="nav">
-            <a href="../index.html" class="nav-link">
+            <a href="../index.html" class="nav-link" data-i18n="nav.home">
                 HOME
             </a>
 
@@ -31,14 +31,39 @@
                 PROJECTS
             </a>
 
-            <a href="../index.html#about" class="nav-link">
+            <a href="../index.html#about" class="nav-link" data-i18n="nav.about">
                 ABOUT
             </a>
 
-            <a href="../index.html#contact" class="nav-link">
+            <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">
                 CONTACT
             </a>
         </nav>
+
+        <div class="language-switcher" aria-label="Language selector">
+
+        <button
+            type="button"
+            class="language-button active"
+            data-lang="en"
+            aria-pressed="true"
+        >
+            EN
+        </button>
+
+        <span>/</span>
+
+        <button
+            type="button"
+            class="language-button"
+            data-lang="es"
+            aria-pressed="false"
+        >
+            ES
+        </button>
+
+        </div>
+        
 
     </header>
 
@@ -49,7 +74,7 @@
         <!-- PROJECT HEADER -->
         <section class="project-header">
 
-            <h1>MICKEY SOURVENIRES</h1>
+            <h1 data-i18n="project.title.mickey">MICKEY SOURVENIRES</h1>
 
             <div class="project-hero">
                 <img
@@ -58,8 +83,8 @@
                 >
             </div>
 
-            <p class="project-category">
-                PRODUCT DESIGN / 3D MODELING
+            <p class="project-category" data-i18n="projects.mickey.category">
+            3D Printing
             </p>
 
         </section>
@@ -68,7 +93,7 @@
         <!-- DESCRIPTION -->
         <section class="project-description">
 
-            <h2>
+            <h2 data-i18n-html="project.description">
                 From digital model<br>
                 to physical object.
             </h2>
@@ -80,7 +105,7 @@
         <section class="project-gallery">
 
             <div class="section-title">
-                <h2>GALLERY</h2>
+                <h2 data-i18n="gallery.title">GALLERY</h2>
                 <span></span>
             </div>
 
@@ -109,7 +134,7 @@
 
                 <div class="section-title">
                     <span></span>
-                    <h2>PROJECT DETAILS</h2>
+                    <h2 data-i18n="project.details.title">PROJECT DETAILS</h2>
                     <span></span>
                 </div>
 
@@ -139,7 +164,7 @@
         <!-- ASK FOR YOURS -->
         <section class="project-back">
 
-            <a href="../index.html#contact" class="button">
+            <a href="../index.html#contact" class="button" data-i18n="ask">
                 ASK FOR YOURS
                 <span>→</span>
             </a>
@@ -149,7 +174,7 @@
         <!-- BACK TO PROJECTS -->
         <section class="project-back">
 
-            <a href="../index.html#projects" class="button">
+            <a href="../index.html#projects" class="button" data-i18n="back.to.projects">
                 BACK TO PROJECTS
                 <span>←</span>
             </a>
@@ -170,7 +195,7 @@
         <span>3D / DESIGN / OBJECTS</span>
 
     </footer>
-
+    <script src="../js/project-language.js"></script>
 </body>
 
 </html>
