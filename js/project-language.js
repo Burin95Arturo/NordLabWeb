@@ -125,7 +125,7 @@ function setProjectLanguage(language) {
     }
 
     document.documentElement.lang = language;
-
+    renderProjects(language);
 
     // Normal text
     document

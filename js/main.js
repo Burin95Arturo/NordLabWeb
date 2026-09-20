@@ -54,6 +54,62 @@ serviceOptions.forEach((option) => {
   });
 });
 
+// =========================
+// PROJECTS
+// =========================
+
+const projectsGrid =
+  document.getElementById("projects-grid");
+
+function renderProjects(language = "en") {
+
+  if (!projectsGrid) return;
+
+  projectsGrid.innerHTML = "";
+
+  projects.forEach((project) => {
+
+    const article = document.createElement("article");
+
+    article.className = "project-card";
+
+    article.innerHTML = `
+      <a href="${project.url}">
+
+        <div class="project-image">
+
+          <img
+            src="${project.image}"
+            alt="${project.title}"
+          >
+
+        </div>
+
+        <div class="project-info">
+
+          <div>
+
+            <h3>
+              ${project.title}
+            </h3>
+
+            <p>
+              ${project.category[language]}
+            </p>
+
+          </div>
+
+          <span class="arrow">→</span>
+
+        </div>
+
+      </a>
+    `;
+
+    projectsGrid.appendChild(article);
+
+  });
+}
 
 // =========================
 // WHAT WE DO → CONTACT
@@ -458,6 +514,8 @@ function setLanguage(language) {
     "nordlab-language",
     language
   );
+
+  renderProjects(language);
 }
 
 
@@ -486,3 +544,6 @@ const savedLanguage =
   localStorage.getItem("nordlab-language") || "en";
 
 setLanguage(savedLanguage);
+
+renderProjects(savedLanguage);
+
