@@ -62,5 +62,18 @@ const projects = [
 
     image: "assets/images/projects/birth-luminous/cover.jpg",
     url: "projects/birth-luminous.html"
+  },
+
+  {
+    slug: "perfum-stand",
+    title: "PERFUM STAND",
+
+    category: {
+      en: "Product Design / 3D Modeling / ORGANIZATION",
+      es: "Diseño de Producto / Modelado 3D / ORGANIZACIÓN"
+    },
+
+    image: "assets/images/projects/perfum-stand/cover.jpg",
+    url: "projects/perfum-stand.html"
   }
 ];
