@@ -547,3 +547,56 @@ setLanguage(savedLanguage);
 
 renderProjects(savedLanguage);
 
+// =========================
+// CONTACT FORM SUBMISSION
+// =========================
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    // Evita la navegación nativa a /api/submit
+    event.preventDefault();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.textContent : "";
+
+    // Feedback visual en el botón durante el envío
+    if (submitBtn) {
+      submitBtn.textContent = "SENDING...";
+      submitBtn.disabled = true;
+    }
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        alert("Message sent successfully!");
+        contactForm.reset();
+
+        // Opcional: Ocultar nuevamente el campo de subir archivo tras resetear
+        if (fileUploadField) {
+          fileUploadField.hidden = true;
+        }
+      } else {
+        alert("Error: " + (result.message || "Could not send message."));
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Connection error. Please try again later.");
+    } finally {
+      // Restablecer el texto original del botón
+      if (submitBtn) {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    }
+  });
+}
