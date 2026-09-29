@@ -2,77 +2,66 @@ const projects = [
   {
     slug: "nordic-lamp",
     title: "NORDIC LAMP",
-
+    price: "$25.000",
     category: {
       en: "Product Design / 3D Modeling / USB power",
       es: "Diseño de Producto / Modelado 3D / Alimentacion USB"
     },
-
     image: "assets/images/projects/nordic-lamp/cover.jpg",
     url: "projects/nordic-lamp.html"
   },
-
   {
     slug: "mickey-souvenires",
     title: "MICKEY SOUVENIRES",
-
+    price: "$12.000",
     category: {
       en: "3D Printing / Souvenirs / Custom Design / keychains",
       es: "Impresión 3D / Souvenirs / Diseño Personalizado / llaveros "
     },
-
     image: "assets/images/projects/mickey-souvenires/cover.jpg",
     url: "projects/mickey-souvenires.html"
   },
-
   {
     slug: "bed-control",
     title: "BED CONTROL",
-
+    price: "$18.500",
     category: {
       en: "Custom Design",
       es: "Diseño Personalizado"
     },
-
     image: "assets/images/projects/bed-control/cover.jpg",
     url: "projects/bed-control.html"
   },
-
   {
     slug: "janukiots",
     title: "JANUKIOTS",
-
+    price: "$15.000",
     category: {
       en: "3D Souvenirs / Custom Design / home decoration",
       es: "Souvenirs 3D / Diseño Personalizado / Decoración para el Hogar"
     },
-
     image: "assets/images/projects/janukiots/cover.jpg",
     url: "projects/janukiots.html"
   },
-
   {
     slug: "birth-luminous",
     title: "BIRTH LUMINOUS",
-
+    price: "$22.000",
     category: {
       en: "3D Lamp / Custom Design / USB power / welcome gift",
       es: "Lámpara 3D / Diseño Personalizado / Alimentación USB / regalo de bienvenida"
     },
-
     image: "assets/images/projects/birth-luminous/cover.jpg",
     url: "projects/birth-luminous.html"
   },
-
   {
     slug: "perfum-stand",
     title: "PERFUM STAND",
-
+    price: "$14.000",
     category: {
       en: "Product Design / 3D Modeling / ORGANIZATION",
       es: "Diseño de Producto / Modelado 3D / ORGANIZACIÓN"
     },
-
     image: "assets/images/projects/perfum-stand/cover.jpg",
     url: "projects/perfum-stand.html"
   }

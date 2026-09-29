@@ -62,52 +62,36 @@ const projectsGrid =
   document.getElementById("projects-grid");
 
 function renderProjects(language = "en") {
-
-  if (!projectsGrid) return;
+  const projectsGrid = document.getElementById("projects-grid");
+  
+  if (!projectsGrid || typeof projects === "undefined") return;
 
   projectsGrid.innerHTML = "";
 
   projects.forEach((project) => {
+    const card = document.createElement("a");
+    card.href = project.url;
+    card.className = "project-card";
 
-    const article = document.createElement("article");
+    const categoryText = project.category?.[language] || project.category?.en || "";
 
-    article.className = "project-card";
-
-    article.innerHTML = `
-      <a href="${project.url}">
-
-        <div class="project-image">
-
-          <img
-            src="${project.image}"
-            alt="${project.title}"
-          >
-
+    card.innerHTML = `
+      <div class="project-image">
+        <img src="${project.image}" alt="${project.title}">
+      </div>
+      <div class="project-info">
+        <h3 class="project-title">${project.title}</h3>
+        <p class="project-category">${categoryText}</p>
+        <div class="project-detail project-price">
+          <span class="project-detail-label" data-i18n="project.price.label">
+            ${language === "es" ? "PRECIO" : "PRICE"}
+          </span>
+          <span class="project-detail-value price-value">${project.price || ''}</span>
         </div>
-
-        <div class="project-info">
-
-          <div>
-
-            <h3>
-              ${project.title}
-            </h3>
-
-            <p>
-              ${project.category[language]}
-            </p>
-
-          </div>
-
-          <span class="arrow">→</span>
-
-        </div>
-
-      </a>
+      </div>
     `;
 
-    projectsGrid.appendChild(article);
-
+    projectsGrid.appendChild(card);
   });
 }
 
@@ -599,4 +583,26 @@ if (contactForm) {
       }
     }
   });
+}
+
+// =========================
+// SCROLL FADE-IN ANIMATION
+// =========================
+
+const observerOptions = {
+  root: null,
+  threshold: 0.15 // Se activa cuando el 15% de la sección es visible
+};
+
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+    }
+  });
+}, observerOptions);
+
+const projectsSection = document.querySelector(".projects-section");
+if (projectsSection) {
+  scrollObserver.observe(projectsSection);
 }

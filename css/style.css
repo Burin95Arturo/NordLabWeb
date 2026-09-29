@@ -647,6 +647,12 @@ border: 1px solid var(--border);
 max-width: 900px;
 }
 
+.project-detail.project-price .price-value {
+    color: #ffcc00; /* O el amarillo principal de la paleta de NordLab */
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
 .project-detail {
 background: var(--black-soft);
 padding: 24px 22px;
@@ -1168,4 +1174,193 @@ background: rgba(255, 100, 100, 0.04);
   .language-switcher {
     font-size: 9px;
   }
+}
+
+/* ===================================
+   PROJECTS GRID & ECOMMERCE STYLE
+   =================================== */
+
+/* Contenedor principal de proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Tarjeta estilo Mercado Libre */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212; /* Ajustar al fondo de tu web si es oscuro/claro */
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen reducida y cuadrada */
+.project-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Mantiene proporción cuadrada compacta */
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Información del producto */
+.project-info {
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-category {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Estilo para el Precio destacado */
+.project-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffcc00; /* Color amarillo distintivo de NordLab */
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+/* Ajustes especiales para celular */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 productos por fila en celular */
+    gap: 0.8rem;
+  }
+
+  .project-info {
+    padding: 0.6rem;
+  }
+
+  .project-title {
+    font-size: 0.85rem;
+  }
+
+  .project-category {
+    font-size: 0.7rem;
+  }
+
+  .project-price {
+    font-size: 1rem;
+  }
+}
+
+/* ===================================
+   PROJECTS GRID & ECOMMERCE STYLE
+   =================================== */
+
+/* Contenedor principal de proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Tarjeta estilo Mercado Libre */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212; /* Ajustar al fondo de tu web si es oscuro/claro */
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen reducida y cuadrada */
+.project-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Mantiene proporción cuadrada compacta */
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Información del producto */
+.project-info {
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-category {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Estilo para el Precio destacado */
+.project-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffcc00; /* Color amarillo distintivo de NordLab */
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+/* Estado inicial oculto para la sección de proyectos */
+.projects-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Clase que se activa al hacer scroll */
+.projects-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
